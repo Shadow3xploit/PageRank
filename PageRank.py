@@ -65,6 +65,7 @@ class PageController:
                 pageFrom.addLink(pageTo)
             
         con.close()
+        print(f"Added {len(self.pages)} from MediaWiki")
 
     def calculateAllPageRanks(self, iterations):
         for i in range(iterations):
@@ -81,7 +82,7 @@ class PageController:
             
         print(f"Sum of all PageRanks: {sum}")
             
-    def runTests(self):
+    def runTests(self): # pragma: no cover
         print("Running Test 1")
         self.clearPages()
         self.addPage(1, "A")
